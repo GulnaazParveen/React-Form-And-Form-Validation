@@ -27,24 +27,24 @@ const NavButton = styled(NavLink)`
   text-decoration: none;
   margin-left: 16px;
   padding: 8px 16px;
-  background-color: ${({ isActive }) => (isActive ? '#6d1b7b' : 'transparent')};
   &:hover {
     background-color: #6d1b7b;
   }
 `;
 
 const Navbar = () => {
+  
   return (
     <Container>
       <NavbarContainer>
         <Title>Fashion-Shop</Title>
-        <NavButton to='/' isActive={({ isActive }) => isActive}>
+        <NavButton exact to='/' >
           Home
         </NavButton>
-        <NavButton to='/contact' isActive={({ isActive }) => isActive}>
+        <NavButton to='/contact' >
           Contact
         </NavButton>
-        <NavButton to='/login' isActive={({ isActive }) => isActive}>
+        <NavButton to='/login' >
           Login/Registration
         </NavButton>
       </NavbarContainer>
